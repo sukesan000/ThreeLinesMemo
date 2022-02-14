@@ -1,0 +1,90 @@
+.default_line {
+  border: solid;
+}
+
+.under_line {
+  text-decoration: underline;
+}
+
+#main_area {
+}
+
+#menu-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border-radius: 7px;
+}
+
+.menu_button {
+  margin: 10px 40px 10px 40px;
+  font-size: 17px;
+  padding: 5px 10px 5px 10px;
+}
+
+.memo_content_area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6e6fa;
+  border-radius: 10px;
+  width: 40%;
+  height: 130px;
+  margin: 10px auto 10px auto;
+}
+
+.title_form {
+  margin: 0 0 0 10px;
+  height: 28px;
+  width: 9em;
+  background-color: #e6e6fa;
+  border-bottom: 1px solid #363333;
+  border-right: none;
+  border-left: none;
+  border-top: none;
+  outline: none;
+}
+
+.memo_form {
+  width: 35em;
+  height: 60px;
+  line-height: 20px;
+  background: linear-gradient(to bottom, #363333 1px, #e6e6fa 1px);
+  background-size: 100% 20px;
+  background-origin: content-box;
+  background-attachment: local;
+  outline: none;
+  resize: none;
+  border: none;
+  overflow: hidden;
+}
+
+.memo_area {
+  padding: 5px;
+}
+
+.create_btn {
+  background-color: #e6e6fa;
+  float: right;
+  margin: 2px, 2px, 0px, 0px;
+}
+
+.edit {
+  display: none;
+}
+
+.column {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}

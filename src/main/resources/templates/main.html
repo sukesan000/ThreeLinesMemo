@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{main.css}" />
+    <script th:src="@{main.js}"></script>
+  </head>
+  <body>
+    <div id="main_area">
+      <div id="menu_area">
+        <div id="menu_content">
+          <button id="create_memo" class="btn menu_button" value="true">
+            +
+          </button>
+          <button id="change_quiz_mode" class="btn menu_button">Q</button>
+        </div>
+        <div class="memo_content_area edit">
+          <form
+            method="post"
+            action="#"
+            th:action="@{/postMemo}"
+            th:object="${memoForm}"
+          >
+            <div class="title_area">
+              <input
+                name="memo_title"
+                class="title_form"
+                th:value="*{memo_title}"
+                placeholder="title"
+              />
+              <button type="submit" class="btn create_btn">作成</button>
+            </div>
+            <div class="memo_area">
+              <textarea
+                name="memo_contents"
+                th:value="*{memo_contents}"
+                class="memo_form"
+                maxlength="30"
+              ></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="column">
+        <div
+          id="display_area"
+          class="memo_content_area"
+          th:each="memo : ${memoList}"
+          th:object="${memo}"
+          th:value="*{id}"
+        >
+          <div class="title_area">
+            <span class="under_line" th:text="*{memo_title}"></span>
+          </div>
+          <div class="memo_area">
+            <span class="under_line" th:text="*{memo_contents}"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
