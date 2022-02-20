@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 
 @Data
 public class Memo {
-    private int id;
+    private int memo_id;
     private String memo_title;
     private String memo_contents;
     private LocalDateTime created;

@@ -37,7 +37,7 @@ public class MemoDaoImpl implements MemoDao {
         List<Memo> list = new ArrayList<Memo>();
         for(Map<String, Object> result: resultList){
             Memo memo = new Memo();
-            memo.setId((int)result.get("id"));
+            memo.setMemo_id((int)result.get("id"));
             memo.setMemo_title((String)result.get("memo_title"));
             memo.setMemo_contents((String)result.get("memo_contents"));
             memo.setCreated((LocalDateTime) result.get("created"));

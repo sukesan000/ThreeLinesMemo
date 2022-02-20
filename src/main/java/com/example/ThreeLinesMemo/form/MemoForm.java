@@ -6,7 +6,7 @@ import javax.validation.constraints.NotNull;
 
 @Data
 public class MemoForm {
-    private int id;
+    private int memo_id;
     @NotNull
     private String memo_title;
     @NotNull
