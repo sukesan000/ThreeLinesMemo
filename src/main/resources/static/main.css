@@ -43,6 +43,16 @@
   margin: 10px auto 10px auto;
 }
 
+.title_area {
+  width: 100%;
+  text-align: center;
+}
+
+.delete_area {
+  margin: 0 0 0 auto;
+  width: 10%;
+}
+
 .title_form {
   margin: 0 0 0 10px;
   height: 28px;

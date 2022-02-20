@@ -50,15 +50,15 @@
           th:each="memo : ${memoList}"
           th:object="${memo}"
         >
+          <form class="delete_area"
+                th:action="@{/deleteOne/{memo_id}(memo_id=*{memo_id})}"
+                method="POST"
+          >
+            <input type="hidden" name="memo_id" th:value="*{memo_id}" />
+            <button type="submit" class="btn delete_btn">削除</button>
+          </form>
           <div class="title_area">
-            <span class="under_line" th:text="*{memo_title}"></span>
-            <form
-              th:action="@{/deleteOne/{memo_id}(memo_id=*{memo_id})}"
-              method="POST"
-            >
-              <input type="hidden" name="memo_id" th:value="*{memo_id}" />
-              <button type="submit" class="btn">削除</button>
-            </form>
+            <span class="under_line title_contents" th:text="*{memo_title}"></span>
           </div>
           <div class="memo_area">
             <span class="under_line" th:text="*{memo_contents}"></span>
